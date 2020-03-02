@@ -51,7 +51,7 @@ spec:
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
-          value: mysql
+          value: mysql-0.mysql
         - name: WORDPRESS_DB_NAME
           value: wordpress
         - name: WORDPRESS_DB_USER

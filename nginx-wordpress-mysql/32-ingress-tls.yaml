@@ -7,14 +7,13 @@ spec:
     - hosts:
       - example.com
       # This assumes tls-secret exists and the SSL
-      # certificate contains a CN for foo.suse.example.com
-      secretName: tls-secret
+      # certificate contains a CN for example.com
+      secretName: example-tls
   rules:
-    - host: foo.suse.example.com
+    - host: example.com
       http:
         paths:
         - path: /
           backend:
-            # This assumes http-svc exists and routes to healthy endpoints
             serviceName: wordpress
             servicePort: 80
